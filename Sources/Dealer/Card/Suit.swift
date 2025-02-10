@@ -1,6 +1,10 @@
 /// An enumeration that defines the suit of a playing card.
 public enum Suit: String, CaseIterable {
     case spades, hearts, diamonds, clubs
+    // case 黑桃 = "spades"   // 黑桃 ♠️
+    // case 红桃 = "hearts"   // 红桃 ♥️
+    // case 方片 = "diamonds" // 方片 ♦️
+    // case 梅花 = "clubs"    // 梅花 ♣️
 }
 
 // MARK: - Comparable

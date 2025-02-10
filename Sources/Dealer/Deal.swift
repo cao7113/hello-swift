@@ -21,7 +21,9 @@ struct Deal: ParsableCommand {
         }
     }
 
-    static var configuration = CommandConfiguration(
+    // Swift 5.5 及之后的版本引入了并发安全检查，如果一个全局变量（或 static 变量）是可变的，Swift 需要确保它是线程安全的。
+    // static var configuration = CommandConfiguration(
+    static let configuration = CommandConfiguration(
         abstract: "Shuffles a deck of playing cards and deals a number of cards.",
         discussion: """
             For each count argument, prints a line of tab-delimited cards to stdout,

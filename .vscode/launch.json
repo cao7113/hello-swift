@@ -35,6 +35,42 @@
       "name": "Release Hello",
       "program": "${workspaceFolder:HelloSwift}/.build/release/Hello",
       "preLaunchTask": "swift: Build Release Hello"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:HelloSwift}",
+      "name": "Debug Hello2",
+      "program": "${workspaceFolder:HelloSwift}/.build/debug/Hello2",
+      "preLaunchTask": "swift: Build Debug Hello2"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:HelloSwift}",
+      "name": "Release Hello2",
+      "program": "${workspaceFolder:HelloSwift}/.build/release/Hello2",
+      "preLaunchTask": "swift: Build Release Hello2"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:HelloSwift}",
+      "name": "Debug Dealer",
+      "program": "${workspaceFolder:HelloSwift}/.build/debug/Dealer",
+      "preLaunchTask": "swift: Build Debug Dealer"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:HelloSwift}",
+      "name": "Release Dealer",
+      "program": "${workspaceFolder:HelloSwift}/.build/release/Dealer",
+      "preLaunchTask": "swift: Build Release Dealer"
     }
   ]
 }

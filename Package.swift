@@ -11,9 +11,6 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0")
-        // .package(
-        //     url: "https://github.com/apple/example-package-deckofplayingcards.git",
-        //     from: "3.0.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -24,21 +21,19 @@ let package = Package(
                 .product(name: "ArgumentParser", package: "swift-argument-parser")
             ]
         ),
-        // // PlayCard Dealer
-        // .executableTarget(
-        //     name: "Dealer",
-        //     dependencies: [
-        //         // .product(
-        //         //     name: "DeckOfPlayingCards",
-        //         //     package: "example-package-deckofplayingcards"),
-        //         .product(
-        //             name: "ArgumentParser",
-        //             package: "swift-argument-parser")
-        //     ]
-        //     // path: "Sources/Dealer"
-        // ),
+        // PlayingCard Dealer
+        .executableTarget(
+            name: "Dealer",
+            dependencies: [
+                .product(
+                    name: "ArgumentParser",
+                    package: "swift-argument-parser")
+            ],
+            exclude: ["README.md"]
+        ),
 
         // Tests
         .testTarget(name: "Learning"),
+        .testTarget(name: "DealerTests", dependencies: ["Dealer"]),
     ]
 )

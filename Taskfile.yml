@@ -2,5 +2,7 @@
 version: '3'
 tasks:
   default: swift test
-  r: swift run
+  run: swift run -- {{.CLI_ARGS}}
+  hello: task run -- Hello
+  deal: swift run Dealer 5
   b: swift build
