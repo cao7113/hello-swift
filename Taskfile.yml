@@ -1,4 +1,6 @@
 # https://taskfile.dev/usage/
 version: '3'
 tasks:
-  default: swift run
+  default: swift test
+  r: swift run
+  b: swift build

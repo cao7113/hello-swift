@@ -4,20 +4,41 @@
 import PackageDescription
 
 let package = Package(
-    name: "Swifter",
-
+    name: "HelloSwift",
+    // products: [
+    //     .executable(name: "Hello", targets: ["Hello"])
+    // ],
     dependencies: [
-        // .package(url: "https://github.com/apple/example-package-figlet", branch: "main"),
+        // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0")
+        // .package(
+        //     url: "https://github.com/apple/example-package-deckofplayingcards.git",
+        //     from: "3.0.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .executableTarget(
-            name: "Swifter",
+            name: "Hello",
             dependencies: [
-                // .product(name: "Figlet", package: "example-package-figlet"),
                 .product(name: "ArgumentParser", package: "swift-argument-parser")
-            ])
+            ]
+        ),
+        // // PlayCard Dealer
+        // .executableTarget(
+        //     name: "Dealer",
+        //     dependencies: [
+        //         // .product(
+        //         //     name: "DeckOfPlayingCards",
+        //         //     package: "example-package-deckofplayingcards"),
+        //         .product(
+        //             name: "ArgumentParser",
+        //             package: "swift-argument-parser")
+        //     ]
+        //     // path: "Sources/Dealer"
+        // ),
+
+        // Tests
+        .testTarget(name: "Learning"),
     ]
 )

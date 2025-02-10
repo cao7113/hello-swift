@@ -1,4 +1,4 @@
-# Hello Swift as Swifter
+# Hello Swift
 
 Learning Swift
 
