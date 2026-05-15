@@ -1,8 +1,13 @@
 # https://taskfile.dev/usage/
 version: '3'
 tasks:
-  default: swift test
+  default: |
+    swift test
+    # swift test --filter testFoundationString
+    
   run: swift run -- {{.CLI_ARGS}}
   hello: task run -- Hello
   deal: swift run Dealer 5
   b: swift build
+
+  repl: swift repl

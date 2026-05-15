@@ -33,7 +33,7 @@ let package = Package(
         ),
 
         // Tests
-        .testTarget(name: "Learning"),
+        .testTarget(name: "Learn"),
         .testTarget(name: "DealerTests", dependencies: ["Dealer"]),
     ]
 )

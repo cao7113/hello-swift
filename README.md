@@ -1,6 +1,6 @@
 # Hello Swift
 
-Learning Swift
+Learning Swift Language
 
 ## Links 
 
